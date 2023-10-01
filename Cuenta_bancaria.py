@@ -89,7 +89,8 @@ def menu(info):
     #funsiones para botones
     def ingresar():
         contenido = dinero.get()
-        
+        dinero.delete(0, "end")
+        dinero.focus()
         if contenido == "":
             etiqueta_info.config(text="** El campor esta vacio **") 
         else:    
@@ -100,6 +101,8 @@ def menu(info):
     
     def sacar():
         contenido = dinero.get()
+        dinero.delete(0, "end")
+        dinero.focus()
         if contenido == "":
             etiqueta_info.config(text="** El campor esta vacio **") 
         elif info.balance < int(contenido):
