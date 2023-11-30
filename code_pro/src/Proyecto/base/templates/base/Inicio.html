@@ -1,0 +1,77 @@
+{% extends "base/Basico.html" %}
+{% load static %}
+{% block contenido %}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Code Pro</title>
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+            <a href="{%url 'Inicio' %}">
+                <img src="{% static 'base/Logo_rande.jpg'%}" alt="logo">
+            </a>
+        </div>
+
+        <div class="elementos_cabezera">
+            <a href="{%url 'Inicio' %}"  class="selector">Portada</a>
+            <a href="{%url 'Servicios' %}" >Servicios</a>
+            <a href="{%url 'Quienes_somos' %}">Quienes somos</a>
+            <a href="{%url 'Contactos' %}">Contactos</a>
+        </div>
+
+    </header>
+    <div class="imagen_inicio_1">
+        <img id="x" src="{% static 'base/programa.avif '%}" class="imagen_inicio" alt="slides">
+    </div>
+
+    <div class="descripcion">
+        <h2>Profesionales del software conectando negocios y tecnología</h2>
+        <p>Visión: Code Pro se enorgullece de ser un líder en la industria del desarrollo de software, con una visión audaz de transformar y simplificar el mundo a través de soluciones tecnológicas innovadoras y de alta calidad.</p>
+        <p>Misión: Nuestra misión es ofrecer soluciones de software excepcionales que impulsen el éxito de nuestros clientes. Nos esforzamos por superar constantemente los estándares de calidad y entregar proyectos a tiempo y dentro del presupuesto.</p>
+    </div>
+
+    <div class="contenido_sombre_nosotors">
+        <div class="elemento_sombre_nosotors">
+            <img src="{% static 'base/valor.png'%}" alt="valores">
+            <h2>Cultura de la Empresa</h2>
+            <p>La cultura de Code Pro se basa en la innovación, la creatividad y la excelencia. Fomentamos un entorno de trabajo colaborativo donde cada miembro del equipo tiene voz y voto en la toma de decisiones. La satisfacción del cliente, la integridad y la ética son fundamentales en nuestra cultura.</p>
+        </div>
+
+        <div class="elemento_sombre_nosotors">
+            <img src="{% static 'base/experiencia.png'%}" alt="experiencia">
+            <h2>Experiencia</h2>
+            <p>Code Pro cuenta con una sólida trayectoria en la industria del desarrollo de software que abarca varios años. A lo largo de este tiempo, la empresa ha completado con éxito numerosos proyectos, acumulando una gran cantidad de experiencia en diversas áreas de desarrollo de software.</p>
+        </div>
+
+        <div class="elemento_sombre_nosotors">
+            <img src="{% static 'base/reputacion.png'%}" alt="reputación">
+            <h2>Reputación</h2>
+            <p> Code Pro ha ganado una reputación envidiable por la calidad de su trabajo. Sus proyectos se destacan por su innovación, precisión y atención al detalle. La empresa se enorgullece de producir soluciones de software de alta calidad que cumplen con los estándares más exigentes.</p>
+        </div>
+    </div>
+
+    <div class="tegnologia">
+        <h2 id="x">Tecnologías y herramientas</h2>
+        <p>Como empresa de ingeniería de productos de software, contamos con experiencia probada en todas las áreas necesarias para lograr un proceso de  desarrollo  formal, confiable y robusto. Proveemos soluciones basadas en:        </p>
+        <div class="img_tegnologias">
+
+            {% for objeto in objeto_inicio %}
+                <img src="{{objeto.imagenes}}" alt="{{objeto}}">
+            {% empty %}
+                esta vacio
+            
+            {% endfor %}
+        </div>
+    </div>
+
+    <style>
+     
+    </style>
+
+</body>
+</html>
+{% endblock %}

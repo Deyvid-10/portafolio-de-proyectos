@@ -1,0 +1,118 @@
+{% extends "base/Basico.html" %}
+{% load static %}
+{% block contenido %}
+
+<!DOCTYPE html>
+<head>
+    <title>Contactos</title>
+</head>
+<body>
+
+    <style>
+        body
+        {
+            background-image: url("{% static 'base/imagen_contacto.jpg' %}");
+        }
+    </style>
+
+    <header>
+        <div class="logo">
+            <a href="{%url 'Inicio' %}">
+                <img src="{% static 'base/Logo_rande.jpg'%}" alt="logo">
+            </a>
+        </div>
+
+        <div class="elementos_cabezera">
+            <a href="{%url 'Inicio' %}">Portada</a>
+            <a href="{%url 'Servicios' %}" >Servicios</a>
+            <a href="{%url 'Quienes_somos' %}">Quienes somos</a>
+            <a href="{%url 'Contactos' %}"class="selector">Contactos</a>
+        </div>
+
+    </header>
+
+    <div class="contenido_contacto">
+
+        <h1 class="titulo_contactos">Contáctanos</h1>
+
+        <p class="parrafo_contacto">En Code Pro, somos mucho más que una empresa de desarrollo de software; somos un equipo apasionado, inteligente y creativo que se esfuerza por transformar ideas en soluciones tecnológicas innovadoras. Nuestra firma se destaca gracias a una combinación excepcional de inteligencia y creatividad que impulsa nuestro éxito y el de nuestros clientes.</p>
+
+        <div class="divisor">
+
+            <div class="contenido_titulos">
+                <h2><span>[ </span>SOCIAL MEDIA<span> ]</span></h2>
+
+                <h2 class="titulo2"><span>[ </span>CONTACTO<span> ]</span></h2>
+
+                <h2 class="titulo3"><span>[ </span>ESCRIBENOS<span> ]</span></h2>
+            </div>
+
+            <div class="contenido_detalle">
+
+                <div class="redes_sociales">
+
+                    <a href="https://www.instagram.com/" target="_blank"><img src="{% static 'base/instagram.png'%}" alt="instagram" ></a>
+                    <a href="https://www.facebook.com/" target="_blank"><img src="{% static 'base/facebook.png'%}" alt="facebook"></a>
+                    <a href="https://www.youtube.com/" target="_blank"><img src="{% static 'base/youtube.png'%}" alt="youtube"></a>
+                    <a href="https://web.whatsapp.com/" target="_blank"><img src="{% static 'base/whatsapp.png'%}" alt="whasapp"></a>
+
+                </div>  
+                
+                <div class="contacto">
+
+                    <div class="sub_contacto">
+                        <img src="{% static 'base/ubicacion.png'%}" alt="direccion">
+
+                        <div class="texto_sub_contacto">
+                            <p class="sub_titulo">Dirección</p>
+                            <p class="parrafos">Av. Núñez de Cáceres 366. Torre Corporativa NC. Santo Domingo, Dominican Republic.</p>
+                        </div>
+
+                    </div>
+
+                    <div class="sub_contacto">
+                        <img src="{% static 'base/telefono.png'%}" alt="telefono">
+
+                        <div class="texto_sub_contacto">
+                            <P class="sub_titulo">Teléfono</P>
+                            <p class="parrafos">+1 (809) 444-2020</p>
+                        </div>
+
+                    </div>
+
+                    <div class="sub_contacto">
+                        <img src="{% static 'base/correo-electronico-vacio.png'%}" alt="correo-electronico">
+
+                        <div class="texto_sub_contacto">
+                            <P class="sub_titulo">Email</P>
+                            <p class="parrafos">info@codepro.com</p>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <form method="post" enctype="multipart/form-data">
+                    {% csrf_token %}
+                    {{form.nombre}}
+                    {{form.email}}
+                    
+                    <br>
+                    <br>
+                    {{form.mensaje}}
+                    <br>
+                    <button class="boton" type="submit">Enviar</button>
+                </form>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    
+</body>
+</html>
+
+{% endblock %}

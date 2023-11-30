@@ -1,0 +1,31 @@
+{% load static %}
+
+<!DOCTYPE html>
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">    
+    <link rel="stylesheet" href="{% static 'base/estilo4.css' %}">
+    <link rel="icon" href="{% static 'base/programacion-1.ico'%}">
+</head>
+<body>
+
+    {% block contenido %}
+    {% endblock %}
+    
+    <footer>
+        <div class="derechos">
+            Copyright ©2009-2023 Code Pro SRL 
+        </div>
+
+        <div class="contactos">
+            
+            <a href="https://www.instagram.com/" target="_blank"><img src="{% static 'base/Instagram_icon-icons.com_66804.png'%}" alt="instagram"></a>
+            <a href="https://www.facebook.com/" target="_blank"><img src="{% static 'base/facebook_logo_icon_147291.png'%}" alt="facebook"></a>
+            <a href="https://www.youtube.com/" target="_blank"><img src="{% static 'base/3721679-youtube_108064.png'%}" alt="youtube"></a>
+            <a href="https://web.whatsapp.com/" target="_blank"><img src="{% static 'base/whatsapp_icon-icons.com_62756.png'%}" alt="whasapp"></a>
+            
+        </div>
+    </footer>
+</body>
+</html>

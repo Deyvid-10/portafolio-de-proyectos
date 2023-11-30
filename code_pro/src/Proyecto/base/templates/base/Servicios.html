@@ -1,0 +1,104 @@
+{% extends "base/Basico.html" %}
+{% load static %}
+{% block contenido %}
+
+<!DOCTYPE html>
+<head>
+    <title>Servicios</title>
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+            <a href="{%url 'Inicio' %}">
+                <img src="{% static 'base/Logo_rande.jpg'%}" alt="logo">
+            </a>
+        </div>
+
+        <div class="elementos_cabezera">
+            <a href="{%url 'Inicio' %}">Portada</a>
+            <a href="{%url 'Servicios' %}" class="selector">Servicios</a>
+            <a href="{%url 'Quienes_somos' %}">Quienes somos</a>
+            <a href="{%url 'Contactos' %}">Contactos</a>
+        </div>
+
+    </header>    
+
+    <div class="cabeza_serv">
+        <img src="{% static 'base/que_ofrecemo.svg' %}" alt="oferta">
+ 
+
+        <div class="texto_cabeza_serv">
+            <h1>¿Qué Ofrecemos?</h1>
+            <h3>Software Empresarial a Medida</h3>
+            <p>Desarrollamos soluciones de software personalizado para empresas, como sistemas de gestión, software de contabilidad, sistemas de recursos humanos y más, adaptados a las necesidades específicas de cada cliente.</p>
+            <h3>Desarrollo Web Avanzado</h3>
+            <p>Creamos sitios web de alta calidad, desde sitios informativos hasta plataformas de comercio electrónico y aplicaciones web avanzadas, utilizando las últimas tecnologías y prácticas de desarrollo web.</p>
+            <h3>Diseño de Interfaz de Usuario (UI)</h3>
+            <p>Nuestro equipo de diseño crea interfaces atractivas y fáciles de usar para aplicaciones y sitios web, centrándose en la usabilidad y la experiencia del usuario.</p>
+
+        </div>
+    </div>
+
+    <h1>Tecnologías y herramientas</h1>
+    <div class="contenido_tegnologias">
+ 
+    {% for objeto in objeto_servicios %}
+
+    <div class="elemento_sombre_nosotors">
+    <img src="{{objeto.imagenes}}" alt="{{objeto}}">
+    <h2>{{objeto}}</h2>
+    <p>{{objeto.parrafo}}</p>
+    </div>
+
+    {% empty %}
+        esta vacio
+    {% endfor %}
+
+    </div>
+
+    <div class="contenido_tegnologias_abajo">
+
+        <h1>Algunos de nuestros servicios</h1>
+
+        <div class="contenido_tegnologias">
+
+
+
+            <div class="elemento_sombre_nosotors">
+                <img src="{% static 'base/telefono-inteligente.png' %}" alt="Aplicaciones Móviles">
+                <h2>Aplicaciones Móviles</h2>
+                <p>Desarrollo de aplicaciones comerciales centradas en el consumidor y para diferentes industrias. Creamos aplicaciones multiplataformas, híbridas HTML5 y aplicaciones web optimizadas para dispositivos móviles que brindan una experiencia de usuario nativa, así como aplicaciones nativas en Apple IOS y Android.</p>
+            </div>
+
+            <div class="elemento_sombre_nosotors">
+                <img src="{% static 'base/web.png' %}" alt="Aplicaciones Web">
+                <h2>Aplicaciones Web</h2>
+                <p>La experiencia de nuestros desarrolladores Web sumado al conocimiento de las últimas metodologías de desarrollo y gestion de proyectos, garantizan la entrega a tiempo, el control presupuestario y el éxito global de los proyectos ejecutados.</p>
+            </div>
+
+            <div class="elemento_sombre_nosotors">
+                <img src="{% static 'base/computadora.png' %}" alt="Aplicaciones Basadas en la Nube">
+                <h2>Aplicaciones Basadas en la Nube</h2>
+                <p>Soluciones escalables y seguras con valor duradero. Nuestras soluciones basadas en la nube son específicas de la industria y están personalizadas para adaptarse perfectamente a procesos únicos. Aproveche nuestra amplia experiencia con plataformas de infraestructura en la nube líderes como Microsoft Azure. Libérese de las limitaciones de desarrollo tradicionales, acelerando tanto los ciclos de desarrollo como las implementaciones.</p>
+            
+            </div>
+        
+            <div class="elemento_sombre_nosotors">
+                <img src="{% static 'base/seguridad-informatica.png' %}" alt="Factoría de Software">
+                <h2>Factoría de Software</h2>
+                <p>Code Pro Software Constructors le proporciona servicios de desarrollo de software en modalidad Outsourcing Services desde sus Delivery Centers localizados en Santo Domingo, República Dominicana.</p>
+            </div>           
+
+            <div class="elemento_sombre_nosotors">
+                <img src="{% static 'base/caracteristica.png' %}" alt="Aplicaciones de escritorio">
+                <h2>Aplicaciones de escritorio</h2>
+                <p>Creamos aplicaciones de escritorio personalizadas para empresas y organizaciones. Nuestro enfoque es comprender las necesidades específicas de cada cliente y desarrollar soluciones de software de escritorio que se adapten perfectamente a sus operaciones y procesos.</p>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
+
+{% endblock %}

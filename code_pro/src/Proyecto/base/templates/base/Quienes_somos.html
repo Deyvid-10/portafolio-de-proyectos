@@ -1,0 +1,147 @@
+{% extends "base/Basico.html" %}
+{% load static %}
+{% block contenido %}
+
+<!DOCTYPE html>
+<head>
+    <title>Quienes somos</title>
+</head>
+<body>
+
+    <style>
+        
+        .imagen_comentarios1
+        {
+            background-image: url("{% static 'base/positividad1.jpg' %}");
+            background-repeat: no-repeat;
+            background-color: aquamarine;
+            background-size: cover;
+            height: 800px;
+            margin-top: 40px;
+        }
+
+        .imagen_comentarios
+        {
+
+            position: relative;
+            top: 50px;
+            left: 40px;
+            margin-bottom: 70px;
+
+        }
+    </style>
+
+    <header>
+        <div class="logo">
+            <a href="{%url 'Inicio' %}">
+                <img src="{% static 'base/Logo_rande.jpg'%}" alt="logo">
+            </a>
+        </div>
+
+        <div class="elementos_cabezera">
+            <a href="{%url 'Inicio' %}">Portada</a>
+            <a href="{%url 'Servicios' %}" >Servicios</a>
+            <a href="{%url 'Quienes_somos' %}" class="selector">Quienes somos</a>
+            <a href="{%url 'Contactos' %}">Contactos</a>
+        </div>
+
+    </header>
+
+    <div class="profesionales_software">
+        <img src="{% static 'base/titulo_somos1.jpeg'%}" alt="equipo"> 
+        <div class="texto">
+            <h1>Profesionales del Software</h1>
+        </div>
+    </div>
+
+    <div class="contenido_descripcion">
+        <img src="{% static 'base/imagen_somos.jpg'%}" alt="equipo">
+        <div class="texto_descripcion">
+            <h1>Donde la Inteligencia y la Creatividad se Unen</h1>
+            <p>En Code Pro, somos mucho más que una empresa de desarrollo de software; somos un equipo apasionado, inteligente y creativo que se esfuerza por transformar ideas en soluciones tecnológicas innovadoras. Nuestra firma se destaca gracias a una combinación excepcional de inteligencia y creatividad que impulsa nuestro éxito y el de nuestros clientes.</p>
+        </div>
+    </div>
+
+
+    <div class="contenido_tegnologias">
+        <div class="elemento_sombre_nosotors">
+            <img src="{% static 'base/objetivo.png' %}" alt="mision">
+            <h2>Mision</h2>
+            <p>Nuestra misión es proporcionar soluciones de software excepcionales a nuestros clientes, impulsando su éxito a través de la innovación y la excelencia en el desarrollo de software. Nos comprometemos a ofrecer resultados excepcionales a través de la colaboración, la creatividad y un enfoque centrado en el cliente.</p>
+        </div>
+
+
+        <div class="elemento_sombre_nosotors">
+            <img src="{% static 'base/vision-compartida.png' %}" alt="vision">
+            <h2>Vision</h2>
+            <p>Ser líderes en la industria del desarrollo de software, siendo reconocidos por nuestras soluciones tecnológicas innovadoras y de alta calidad, que transforman y simplifican el mundo.</p>
+        </div>    
+
+        <div class="elemento_sombre_nosotors">
+        <img src="{% static 'base/valor.png' %}" alt="valores">
+        <h2>Valores</h2>
+        <ul>
+            <li>Innovación</li>
+            <li>Calidad</li>
+            <li>Colaboración</li>
+            <li>Integridad y Ética</li>
+            <li>Satisfacción del Cliente</li>
+            <li>Aprendizaje Continuo</li>
+            <li>Responsabilidad Social</li>
+        </ul>
+        </div>
+    </div>
+
+    <div class="imagen_comentarios1">
+        <div class="imagen_comentarios">
+            <div class ="comentarios">
+                <p>Code Pro ha significado un excelente y productivo aliado comercial, siempre están dispuestos a contribuir con la materialización de nuestras aportando soluciones de software innovadoras y respondiendo con agilidad y gran diligencia.</p>
+                
+                <div class="comentador">
+                    <img src="{% static 'base/chica.jpg' %}" alt="chica">
+
+                    <div class="nombre_comentario">
+                        <h4>Lic. Eva Martínez</h4>
+                        <p>CEO Grupo Macroinvest</p>
+                    </div>            
+                </div>
+            </div>
+
+
+            <div class ="comentarios">
+                <p>Mi experiencia trabajando con Xtudia, me ha demostrado que el conocimiento, la experiencia y sobre todo la disposición es parte fundamental para obtener resultados eficientes.    </p>
+            
+                <div class="comentador">
+                    <img src="{% static 'base/chico1.jpg' %}" alt="chico">
+
+                    <div class="nombre_comentario">
+
+                        <h4>Ing. Carlos Rodríguez</h4>
+                        <p>CEO Aracitech</p>
+
+                    </div>            
+                </div>
+            </div>
+
+            <div class ="comentarios">
+                <p>I was thrilled to tour XTUDIA in Santo Domingo. Amazing to find all the great innovations that Pedro Taveras and his talented XTUDIA team of developers are creating.</p>
+            
+                <div class="comentador">
+                    <img src="{% static 'base/chico2.jpg' %}" alt="chico">
+
+                    <div class="nombre_comentario">
+                        <h4>Luis García</h4>
+                        <p>VP, Sr. Integrated Producer, at CP+B</p>
+
+                    </div>            
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</body>
+
+</html>
+
+{% endblock %}
